@@ -6,16 +6,19 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
-import { SignupComponent } from './modules/auth/signup/signup.component';
-import { LoginComponent } from './modules/auth/login/login.component';
+import { SignupComponent } from './modules/auth/components/signup/signup.component';
+import { LoginComponent } from './modules/auth/components/login/login.component';
 import { TrainingComponent } from './modules/training/training.component';
-import { CurrentTrainingComponent } from './modules/training/current-training/current-training.component';
-import { NewTrainingComponent } from './modules/training/new-training/new-training.component';
-import { PastTrainingsComponent } from './modules/training/past-trainings/past-trainings.component';
+import { CurrentTrainingComponent } from './modules/training/components/current-training/current-training.component';
+import { NewTrainingComponent } from './modules/training/components/new-training/new-training.component';
+import { PastTrainingsComponent } from './modules/training/components/past-trainings/past-trainings.component';
 import { WelcomeComponent } from './modules/welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { StopTrainingComponent } from './modules/training/components/current-training/stop-training.component';
+import { AuthService } from './modules/auth/shared/auth.service';
+import { TrainingService } from './modules/training/shared/training.service';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     PastTrainingsComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService, TrainingService],
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }

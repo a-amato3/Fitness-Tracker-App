@@ -2,6 +2,8 @@
   <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
   <h1>{{ progress }}%</h1>
   <p>Go you crazy ...</p>
-  <button mat-raised-button="accent">Stop</button>
+  <button mat-raised-button="accent" (click)="onStop()">Stop</button>
 </section>
+
+
 
