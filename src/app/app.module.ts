@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule} from '@angular/fire/auth';
-
+import { TrainingModule } from './modules/training/training.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
@@ -14,8 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { UIService } from './shared/ui.service';
-import { TrainingModule } from './modules/training/training.module';
-import { AuthModule } from './modules/auth/auth.module';
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
@@ -29,8 +29,8 @@ import { AuthModule } from './modules/auth/auth.module';
     TrainingModule,
     AuthModule,
     BrowserModule,
+    SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,

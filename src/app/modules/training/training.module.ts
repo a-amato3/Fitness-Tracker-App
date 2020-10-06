@@ -7,12 +7,10 @@ import { TrainingComponent } from './training.component';
 import { NewTrainingComponent } from './components/new-training/new-training.component';
 import { PastTrainingsComponent } from './components/past-trainings/past-trainings.component';
 import { CurrentTrainingComponent } from './components/current-training/current-training.component';
-import { MaterialModule } from '../../shared/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { TrainingService } from './shared/training.service';
 import { StopTrainingComponent } from './components/current-training/stop-training.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
@@ -26,12 +24,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
   ],
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule,
+    SharedModule,
     AngularFirestoreModule,
-    FlexLayoutModule
   ],
   providers: [TrainingService],
   entryComponents: [StopTrainingComponent]
