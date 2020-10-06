@@ -34,7 +34,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
   ],
   providers: [UIService],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -41,7 +41,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +63,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
   ]
 })
 export class MaterialModule { }
