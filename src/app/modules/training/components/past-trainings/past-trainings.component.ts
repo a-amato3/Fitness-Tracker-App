@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort  } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Exercise } from '../../shared/exercise.model';
 import { TrainingService } from '../../shared/training.service';
 import { Subscription } from 'rxjs';

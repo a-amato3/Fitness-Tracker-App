@@ -1,10 +1,10 @@
 import { AuthData } from './auth-data.model';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { TrainingService } from '../../training/shared/training.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { UIService } from '../../../shared/ui.service';
 @Injectable()
 export class AuthService {
@@ -35,7 +35,7 @@ export class AuthService {
 
   registerUser(authData: AuthData) {
     this.uiService.loadingStateChanged.next(true);
-    this.auth.auth.createUserWithEmailAndPassword(authData.email, authData.password)
+    this.auth.createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
         this.uiService.loadingStateChanged.next(false);
       })
@@ -47,7 +47,7 @@ export class AuthService {
 
   login(authData: AuthData) {
     this.uiService.loadingStateChanged.next(true);
-    this.auth.auth.signInWithEmailAndPassword(authData.email, authData.password)
+    this.auth.signInWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
         this.uiService.loadingStateChanged.next(false);
       })
@@ -57,7 +57,7 @@ export class AuthService {
       });
   }
   logout() {
-    this.auth.auth.signOut();
+    this.auth.signOut();
   }
 
   isAuth() {

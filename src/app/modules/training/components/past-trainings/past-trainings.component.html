@@ -7,32 +7,32 @@
 
 <table mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="date">
-    <tr mat-header-cell *matHeaderCellDef mat-sort-header>Date</tr>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.date.toDate() | date: 'dd MMM hh:mm' }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="name">
-    <tr mat-header-cell *matHeaderCellDef mat-sort-header>Name</tr>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="calories">
-    <tr mat-header-cell *matHeaderCellDef mat-sort-header>Calories</tr>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Calories</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.calories | number }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="duration">
-    <tr mat-header-cell *matHeaderCellDef mat-sort-header>Duration</tr>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Duration</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.duration | number }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="state">
-    <tr mat-header-cell *matHeaderCellDef mat-sort-header>State</tr>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.state }}</mat-cell>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </table>
 
 <mat-paginator [pageSizeOptions]="[1, 5, 10, 20]">
