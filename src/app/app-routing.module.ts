@@ -6,6 +6,7 @@ import { SignupComponent } from './modules/auth/components/signup/signup.compone
 import { LoginComponent } from './modules/auth/components/login/login.component';
 import { TrainingComponent } from './modules/training/training.component';
 import { AuthGuard } from './modules/auth/shared/auth.guard';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ReactiveFormsModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [AuthGuard]
 })
